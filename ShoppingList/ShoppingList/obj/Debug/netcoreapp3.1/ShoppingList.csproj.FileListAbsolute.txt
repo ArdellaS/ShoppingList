@@ -1,0 +1,11 @@
+C:\Users\DShelton\OneDrive - KNEX\Documents\GCDevBuild\ShoppingList\ShoppingList\ShoppingList\bin\Debug\netcoreapp3.1\ShoppingList.exe
+C:\Users\DShelton\OneDrive - KNEX\Documents\GCDevBuild\ShoppingList\ShoppingList\ShoppingList\bin\Debug\netcoreapp3.1\ShoppingList.deps.json
+C:\Users\DShelton\OneDrive - KNEX\Documents\GCDevBuild\ShoppingList\ShoppingList\ShoppingList\bin\Debug\netcoreapp3.1\ShoppingList.runtimeconfig.json
+C:\Users\DShelton\OneDrive - KNEX\Documents\GCDevBuild\ShoppingList\ShoppingList\ShoppingList\bin\Debug\netcoreapp3.1\ShoppingList.runtimeconfig.dev.json
+C:\Users\DShelton\OneDrive - KNEX\Documents\GCDevBuild\ShoppingList\ShoppingList\ShoppingList\bin\Debug\netcoreapp3.1\ShoppingList.dll
+C:\Users\DShelton\OneDrive - KNEX\Documents\GCDevBuild\ShoppingList\ShoppingList\ShoppingList\bin\Debug\netcoreapp3.1\ShoppingList.pdb
+C:\Users\DShelton\OneDrive - KNEX\Documents\GCDevBuild\ShoppingList\ShoppingList\ShoppingList\obj\Debug\netcoreapp3.1\ShoppingList.csprojAssemblyReference.cache
+C:\Users\DShelton\OneDrive - KNEX\Documents\GCDevBuild\ShoppingList\ShoppingList\ShoppingList\obj\Debug\netcoreapp3.1\ShoppingList.AssemblyInfoInputs.cache
+C:\Users\DShelton\OneDrive - KNEX\Documents\GCDevBuild\ShoppingList\ShoppingList\ShoppingList\obj\Debug\netcoreapp3.1\ShoppingList.AssemblyInfo.cs
+C:\Users\DShelton\OneDrive - KNEX\Documents\GCDevBuild\ShoppingList\ShoppingList\ShoppingList\obj\Debug\netcoreapp3.1\ShoppingList.dll
+C:\Users\DShelton\OneDrive - KNEX\Documents\GCDevBuild\ShoppingList\ShoppingList\ShoppingList\obj\Debug\netcoreapp3.1\ShoppingList.pdb
