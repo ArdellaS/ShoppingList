@@ -37,54 +37,59 @@ namespace ShoppingList
             foodPrice.Add(5.99);
             foodPrice.Add(6.99);
 
-            List<string> foodOrder = new List<string>();
+            List<string> orderName = new List<string>();
+            List<double> orderPrice = new List<double>();
 
             string answer = "";
-            double average = 0;
-
-            string welcome = "Welcome to Home Maid Sweets";
-
-            Console.WriteLine($"{welcome}\n\n");
-            //while (true)
-            //{
-            Console.WriteLine($"\t\tSweets \t\tMunnies");
-            Console.WriteLine("\t=================================");
-
+            double average = 0.0;
+            double sum = 0.0;
             
-
+            Console.WriteLine($"Welcome to Home Maid Sweets\n\n");
 
             do
             {
-                foreach (KeyValuePair<string, double> kvPair in menuItems)
-                {
-                    Console.WriteLine($"{kvPair.Key,30}: {kvPair.Value,5}");
-                }
 
-                string item = GetString("Which item would you like: ").ToLower();
-                //if food is in list
-                while (!foodName.Contains(item))
+                do
                 {
-                    Console.WriteLine("Please select an item from the list.");
-                    item = GetString("Which item would you like: ").ToLower();
-                }
-                foodOrder.Add(item);
-                Console.WriteLine($"Order contains: {item}");
+                    Console.WriteLine($"\t\tSweets \t\tMunnies");
+                    Console.WriteLine("\t=================================");
 
-                answer = GetString("Would you like to add more sweets?\nYes/No").ToLower();
+                    foreach (KeyValuePair<string, double> kvPair in menuItems)
+                    {
+                        Console.WriteLine($"{kvPair.Key,30}: {kvPair.Value,5}");
+                    }
+
+                    string item = GetString($"\nWhich item would you like: ").ToLower();
+                    //if food is in list
+                    while (!foodName.Contains(item))
+                    {
+                        Console.WriteLine($"\nPlease select an item from the list.");
+                        item = GetString($"\nWhich item would you like: ").ToLower();
+                    }
+                    orderName.Add(item);
+                    Console.WriteLine($"\nItem added: {item}");
+                    orderPrice.Add(foodPrice[IndexOf(foodName, item)]);
+                    answer = GetString($"\nWould you like to add more sweets?\nYes/No").ToLower();
+                    Console.Clear();
+                } while (answer.Equals("yes") || answer.Equals("y"));
+
+                Console.WriteLine("\nThanks for your order: \nHere's what you got:");
+                //prints selected items
+                for (int i = 0; i < orderName.Count; i++)
+                {
+
+                    Console.WriteLine($"{orderName[i],10}\t${orderPrice[i],10}");
+                    sum += orderPrice[i];
+
+                }
+                average = sum / orderName.Count;
+
+                Console.WriteLine($"Order average: ${average}");
+
+                answer = GetString($"\nWould you like to shop agian?\nYes/No").ToLower();
                 Console.Clear();
             } while (answer.Equals("yes") || answer.Equals("y"));
-            
 
-            Console.WriteLine("Thanks for your order: \nHere's what you go");
-            //prints selected items
-            for (int i = 0; i < foodOrder.Count; i++)
-            {
-                Console.WriteLine($"{foodOrder[i]}\t{foodPrice[i]}");
-            }
-
-
-
-            //}
 
         }
         static string GetString(string prompt)
@@ -92,5 +97,18 @@ namespace ShoppingList
             Console.WriteLine(prompt);
             return Console.ReadLine();
         }
+        static int IndexOf(List<string> arr, string s)
+        {
+            //don't use a foreach--we need index
+            for (int i = 0; i < arr.Count; i++)
+            {
+                if (s == arr[i])
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
     }
 }
