@@ -82,9 +82,9 @@ namespace ShoppingList
                     sum += orderPrice[i];
 
                 }
-                average = sum / orderName.Count;
+                average = Math.Round((sum / orderName.Count),2);
 
-                Console.WriteLine($"Order average: ${average}");
+                Console.WriteLine($"\nOrder average: ${average}");
 
                 answer = GetString($"\nWould you like to shop agian?\nYes/No").ToLower();
                 Console.Clear();
